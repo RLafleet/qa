@@ -1,0 +1,33 @@
+{
+    "name": "lab8-ts",
+    "version": "1.0.0",
+    "description": "TypeScript version of lab8",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "jest",
+        "test:wsl": "jest --config jest.wsl.config.js",
+        "test:add": "jest --config jest.wsl.config.js -t 'Add product'",
+        "test:delete": "jest --config jest.wsl.config.js -t 'Delete existing'",
+        "test:edit": "jest --config jest.wsl.config.js -t 'Valid Edit'",
+        "test:validation": "jest --config jest.wsl.config.js -t 'Quick Validation'",
+        "test:boundary": "jest --config jest.wsl.config.js -t 'Boundary Values'",
+        "test:invalid": "jest --config jest.wsl.config.js -t 'Invalid Values'",
+        "test:alias": "jest --config jest.wsl.config.js -t 'Alias Generation'",
+        "test:quick-alias": "jest --config jest.wsl.config.js -t 'Quick Alias'",
+        "start": "node dist/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jest": "^29.5.12",
+        "@types/node": "^20.11.17",
+        "jest": "^29.7.0",
+        "ts-jest": "^29.1.2",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "axios": "^1.6.7"
+    }
+}

@@ -1,0 +1,353 @@
+import { Product } from '../model/Product';
+
+export const baseUrl = "http://shop.qatl.ru";
+
+export const commonCategoryID = "2";
+export const commonTitle = "Тестовый продукт";
+export const commonContent = "Содержание тестового продукта";
+export const commonPrice = "100";
+export const commonOldPrice = "150";
+export const commonStatus = "1";
+export const commonKeywords = "тест, продукт";
+export const commonDescription = "Тестовый продукт для проверки API";
+export const commonHit = "1";
+
+export const validProductMinCategoryId: Product = {
+    category_id: "1",
+    title: "Тестовый продукт",
+    content: "Содержание тестового продукта",
+    price: "100",
+    old_price: "150",
+    status: "1",
+    keywords: "тест, продукт",
+    description: "Тестовый продукт для проверки API",
+    hit: "1"
+};
+
+export const validCases: Record<string, Product> = {
+    "valid_product_min_category_id": validProductMinCategoryId,
+    "valid_product_max_category_id": {
+        category_id: "15",
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_min_title": {
+        category_id: commonCategoryID,
+        title: "",
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_max_title": {
+        category_id: commonCategoryID,
+        title: "A".repeat(255),
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_min_content": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: "",
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_max_content": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: "A".repeat(65535),
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_min_price": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: "0",
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_max_price": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: "99999999999999999999999999999999999999",
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_min_old_price": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: "0",
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_max_old_price": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: "99999999999999999999999999999999999999",
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_min_status": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: "0",
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_max_status": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: "1",
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_min_keywords": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: "",
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_max_keywords": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: "A".repeat(255),
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "valid_product_min_description": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: "",
+        hit: commonHit,
+    },
+    "valid_product_max_description": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: "A".repeat(255),
+        hit: commonHit,
+    },
+    "valid_product_min_hit": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: "0",
+    },
+    "valid_product_max_hit": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: "1",
+    },
+};
+
+export const invalidCases: Record<string, Product> = {
+    "invalid_type_category_id": {
+        category_id: "abc",
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "invalid_category_id_below_range": {
+        category_id: "0",
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "invalid_category_id_above_range": {
+        category_id: "16",
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "invalid_negative_price": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: "-100",
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "invalid_negative_old_price": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: "-100",
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "invalid_status_below_range": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: "-1",
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "invalid_status_above_range": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: "2",
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: commonHit,
+    },
+    "invalid_hit_below_range": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: "-1",
+    },
+    "invalid_hit_above_range": {
+        category_id: commonCategoryID,
+        title: commonTitle,
+        content: commonContent,
+        price: commonPrice,
+        old_price: commonOldPrice,
+        status: commonStatus,
+        keywords: commonKeywords,
+        description: commonDescription,
+        hit: "2",
+    },
+};
+
+export const boundaryCases: Record<string, Product> = {
+    "min_category_id": {
+        ...validProductMinCategoryId,
+        category_id: "1"
+    },
+    "max_category_id": {
+        ...validProductMinCategoryId,
+        category_id: "15"
+    },
+    "status_zero": {
+        ...validProductMinCategoryId,
+        status: "0"
+    },
+    "status_one": {
+        ...validProductMinCategoryId,
+        status: "1"
+    },
+    "hit_zero": {
+        ...validProductMinCategoryId,
+        hit: "0"
+    },
+    "hit_one": {
+        ...validProductMinCategoryId,
+        hit: "1"
+    },
+    "price_zero": {
+        ...validProductMinCategoryId,
+        price: "0"
+    },
+    "old_price_zero": {
+        ...validProductMinCategoryId,
+        old_price: "0"
+    }
+}; 
